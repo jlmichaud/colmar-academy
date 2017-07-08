@@ -19,25 +19,22 @@ h2 {
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.5;
 }
 
 p {
-  padding-top: 0.5rem;
+  font-weight: 200;
+  line-height: 1.5;
 }
 
 .main-container {
   max-width: 1020px;
   margin: auto;
-  border: 4px solid green;
-}
-
-.main-image {
-  padding: 2rem 2.5rem 2rem 1.5rem;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .square-image {
@@ -60,9 +57,14 @@ header {
   margin-left: 1.5rem;
 }
 
-.bold {
-  font-weight: bold;
-  color: black;
+span.bold {
+  font-weight: 600;
+  color: #000;
+}
+
+span.light {
+  font-weight: 300;
+  color: #908F8F;
 }
 
 nav a {
@@ -76,15 +78,28 @@ nav a {
 #banner {
   background-color: #E1E0E0;
   display: flex;
+  align-items: center;
+}
+
+#banner .main-image {
+  padding: 2rem 2.5rem 2rem 1.5rem;
 }
 
 #banner .text-box {
-    width: 26.4375rem;
+  padding-right: 11rem;
 }
 
-#banner .main {
-  display: flex;
+#banner p {
+  margin: 2rem auto 2rem auto;
 }
+#banner span {
+  display: block;
+  color: white;
+  background-color: #5E5E5E;
+  padding: 0.5rem;
+  text-align: center;
+}
+
 
 /* Top section just below banner */
 
@@ -97,16 +112,20 @@ nav a {
   flex-direction: column;
 }
 
+#top .main-image {
+  padding: 2rem 1.5rem 2rem 1.5rem;
+}
+
 #top .main p {
   padding-top: 1.5rem;
 }
 
-#top .text-box {
-  margin: auto 2rem 4rem 2rem;
+#top .main .text-box {
+  margin: auto 1.5rem 3rem 1.5rem;
 }
 
 #top .side-bar {
-  border-left: 0.5px solid #E1E0E0;
+  border-left: 1px solid #E1E0E0;
   padding-top: 1rem;
 }
 
@@ -117,7 +136,7 @@ nav a {
 }
 
 #top .side-bar-item:nth-child(1) {
-  border-bottom: 0.5px solid #E1E0E0;
+  border-bottom: 1px solid #E1E0E0;
 }
 
 #top .side-bar-item:nth-child(3) {
@@ -138,20 +157,22 @@ nav a {
 }
 
 .course-grid {
-  max-width: 80%;
+  max-width: 95%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 2rem 0;
-  border: 4px solid red;
   }
 
 .course {
   max-width: 30%;
+  height: 18rem;
+  margin: 1rem 1rem;
 }
 
 .course .text-box {
   background-color: white;
+  height: 120px;
   padding: 1rem 1rem 1.5rem 1rem;
 }
 
@@ -171,10 +192,20 @@ nav a {
 
 #bottom .main {
   max-width: 65%;
+  padding: 0 1rem 2rem 2rem;
 }
 
 #bottom video {
   max-width: 100%;
+  border: 1px solid #E1E0E0;
+}
+
+#bottom .main .text-box {
+  margin-top: 1.5rem;
+}
+
+#bottom .main p {
+  margin-top: 1rem;
 }
 
 #bottom .side-bar-item {
@@ -182,6 +213,9 @@ nav a {
   align-items: center;
   width: 26.4375rem;
 
+#bottom .side-bar-item:nth-child(1) {
+  background-color: #E1E0E0;
+}
 
 /* Footer */
 
@@ -189,7 +223,7 @@ footer {
   display: flex;
   justify-content: space-between;
   font-size: small;
-  border-top: 0.5px solid #E1E0E0;
+  border-top: 1px solid #E1E0E0;
   padding: 1rem 0 3rem 0;
 }
 
