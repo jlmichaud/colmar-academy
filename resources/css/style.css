@@ -6,6 +6,10 @@ html {
   box-sizing: border-box;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -124,7 +128,7 @@ nav.small {
   margin: 2rem auto 2rem auto;
 }
 
-#banner span {
+.button a {
   display: block;
   color: white;
   background-color: #5E5E5E;
@@ -188,7 +192,6 @@ nav.small {
 
 #top .square-image {
   max-width: 35%;
-  overflow: hidden;
   padding: 1rem;
 }
 
@@ -217,6 +220,7 @@ nav.small {
   #top .side-bar {
     width: 100%;
     padding: 0;
+    border-left: none;
   }
 
   #top .side-bar-item {
@@ -239,10 +243,15 @@ nav.small {
     display: none;
   }
 
+  #top .side-bar {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
   #top .side-bar-item {
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
+    max-width: 100%;
     border-top: none;
   }
 
@@ -266,7 +275,7 @@ nav.small {
   #top .mobile-image {
     display: block;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0 1rem 0;
   }
 }
 
