@@ -188,11 +188,8 @@ nav.small {
 
 #top .square-image {
   max-width: 35%;
+  overflow: hidden;
   padding: 1rem;
-}
-
-#top img {
-  width: 100%;
 }
 
 #top .mobile-image {
