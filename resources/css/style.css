@@ -80,8 +80,8 @@ span.bold {
 }
 
 span.light {
-  font-weight: 300;
-  color: #908F8F;
+  font-weight: 100;
+  color: #878787;
 }
 
 nav a {
@@ -138,7 +138,7 @@ nav.small {
 .button a {
   display: block;
   color: white;
-  background-color: #39ACDE;
+  background-color: #1B5772;
   padding: 0.5rem;
   text-align: center;
   border-radius: 4px;
@@ -147,7 +147,7 @@ nav.small {
 @media only screen and (min-width: 1025px) {
   .button a:hover {
     color: #FFF;
-    box-shadow: 1px 1px 2px 1px #BDBDBD;
+    box-shadow: 1px 1px 2px 1px #333;
   }
 }
 
@@ -471,7 +471,7 @@ footer {
 
 .footer-links a {
   text-decoration: none;
-  color: grey;
+  color: #5E5E5E;
 }
 
 /* Footer for small screens */
