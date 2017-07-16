@@ -1,4 +1,12 @@
 /* General Styles */
+
+/* A couple of Codecademy advisors told me that the Colmar Academy site is supposed to fill the full width of the screen, but the wireframe's math doesn't add up to that: If the main images are 60% of the site's width, then the left and right padding of those images (24px + 24px) plus the stated width of the side-bar (423px) has to equal the remaining 40% of the site's width. So if 471px = 40% then 60% is 707px for a total of 1178px.
+
+Honestly I'm struggling so much to wrap my head around the course content that I feel pretty frustrated to then also have to deal with this sloppy bad math. Why not just say the main sections should take up 60% of the width and the sidebars the remaining 40%?
+
+I've put too much time into this in its current format to try and redesign it to make it full width and still have everything line up properly. Please tell the course designers to take more care in laying out the wireframes. Thanks. */
+
+/* General Styles */
 html {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
@@ -39,7 +47,7 @@ a {
   color: #5E5E5E;
 }
 
-a:hover {
+span a:hover, a:hover {
   color: #39ACDE
 }
 
@@ -117,7 +125,7 @@ nav.small {
 }
 
 #banner .text-box {
-  flex-basis: 18rem;
+  flex-basis: 20rem;
   padding-left: 1rem;
   padding-right: 2rem;
 }
@@ -300,17 +308,14 @@ nav.small {
   }
 
 .course {
-  display: flex;
-  flex-direction: column;
   flex: 1 1 25%;
+  margin: 1rem;
   min-width: 12rem;
-  margin: 1rem 1rem;
-  line-height: 0;
-  justify-content: stretch;
+  background-color: white;
+  flex-direction: column;
 }
 
 .course .text-box {
-  background-color: white;
   padding: 1rem 1rem 1.5rem 1rem;
 
 }
