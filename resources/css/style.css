@@ -1,10 +1,6 @@
-/* General Styles */
+/* A couple of Codecademy advisors told me that the Colmar Academy site is supposed to fill the full width of the screen, but the wireframe's math doesn't add up to that: If the main images are 60% of the site's width, then the left and right padding of those images (24px + 24px) plus the stated width of the side-bar (423px) has to equal the remaining 40%. So if 471px = 40% then 60% is 707px for a total of 1178px.
 
-/* A couple of Codecademy advisors told me that the Colmar Academy site is supposed to fill the full width of the screen, but the wireframe's math doesn't add up to that: If the main images are 60% of the site's width, then the left and right padding of those images (24px + 24px) plus the stated width of the side-bar (423px) has to equal the remaining 40% of the site's width. So if 471px = 40% then 60% is 707px for a total of 1178px.
-
-Honestly I'm struggling so much to wrap my head around the course content that I feel pretty frustrated to then also have to deal with this sloppy bad math. Why not just say the main sections should take up 60% of the width and the sidebars the remaining 40%?
-
-I've put too much time into this in its current format to try and redesign it to make it full width and still have everything line up properly. Please tell the course designers to take more care in laying out the wireframes. Thanks. */
+Honestly I'm struggling so much to wrap my head around the course content and it's pretty frustrating to then also have to deal with this sloppy math. Why not just say the main sections should take up 60% of the width and the sidebars the remaining 40%? I don't have it in me to change it to full screen and make sure everything lines up properly at this point. Please tell the course designers to take more care in laying out the wireframes. Thanks. */
 
 /* General Styles */
 html {
@@ -47,10 +43,6 @@ a {
   color: #5E5E5E;
 }
 
-span a:hover, a:hover {
-  color: #39ACDE
-}
-
 .main-container {
   max-width: 73.625rem;
   margin: auto;
@@ -59,6 +51,13 @@ span a:hover, a:hover {
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+/* General style to turn on hover state on larger screens */
+@media only screen and (min-width: 1025px) {
+  span a:hover, a:hover {
+    color: #39ACDE;
+  }
 }
 
 /* Header */
@@ -142,7 +141,16 @@ nav.small {
   background-color: #5E5E5E;
   padding: 0.5rem;
   text-align: center;
+  border-radius: 4px;
 }
+
+@media only screen and (min-width: 1025px) {
+  .button a:hover {
+    color: #FFF;
+    border: 2px solid #FFF;
+  }
+}
+
 
 /* Banner for medium and small screens */
 @media only screen and (max-width: 768px) {
@@ -154,7 +162,6 @@ nav.small {
   #banner .main-image {
     width: 100%;
     margin: 0;
-    /*height: 11.25rem;*/
   }
 
   #banner .text-box {
@@ -208,6 +215,7 @@ nav.small {
 }
 
 #top .side-bar-item .text-box {
+  width: 100%;
   padding-right: 1.5rem;
 }
 
@@ -232,12 +240,9 @@ nav.small {
   }
 
   #top .side-bar-item {
-    border-top: 1px solid #E1E0E0;
-  }
-
-  #top .side-bar-item {
     width: 100%;
     padding-top: 0;
+    border-top: 1px solid #E1E0E0;
   }
 
   #top .side-bar-item:nth-child(3) {
@@ -307,21 +312,31 @@ nav.small {
   margin: 1rem 0 1rem 0;
   }
 
-.course {
+#course-container a {
   flex: 1 1 25%;
-  margin: 1rem;
   min-width: 12rem;
+}
+
+.course {
+  margin: 1rem;
   background-color: white;
   flex-direction: column;
 }
 
 .course .text-box {
   padding: 1rem 1rem 1.5rem 1rem;
-
 }
 
 .course-grid-small {
   display: none;
+}
+
+/* Courses - To turn on shadow hover effect on larger screens */
+@media only screen and (min-width: 1025px) {
+  a.course:hover {
+    color: inherit;
+    box-shadow: 2px 2px 4px 2px #BDBDBD;
+  }
 }
 
 /* Course grid for small screens */
@@ -346,6 +361,7 @@ nav.small {
     padding: 1rem;
     background-color: #F0EFEF;
     margin: 0.5rem 1rem auto 1rem;
+    box-shadow: 1px 1px 1px 1px #BDBDBD;
   }
 }
 
@@ -363,8 +379,8 @@ nav.small {
 }
 
 #bottom .main {
-  max-width: 65%;
-  padding: 0 2rem 2rem 2rem;
+  width: 60%;
+  margin: 0 2rem 1rem 1.5rem;
 }
 
 #bottom video {
@@ -423,8 +439,9 @@ nav.small {
   }
 
   #bottom .main {
-    max-width: 100%;
+    width: 100%;
     padding: 0;
+    margin: 0;
   }
 
   #bottom .main .text-box {
