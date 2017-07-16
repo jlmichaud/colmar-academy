@@ -14,6 +14,11 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: #5E5E5E;
+}
+
 h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -36,11 +41,6 @@ p {
   font-weight: 200;
   line-height: 1.5rem;
   padding: 0.25rem 0;
-}
-
-a {
-  text-decoration: none;
-  color: #5E5E5E;
 }
 
 .main-container {
@@ -138,7 +138,7 @@ nav.small {
 .button a {
   display: block;
   color: white;
-  background-color: #5E5E5E;
+  background-color: #39ACDE;
   padding: 0.5rem;
   text-align: center;
   border-radius: 4px;
@@ -147,10 +147,9 @@ nav.small {
 @media only screen and (min-width: 1025px) {
   .button a:hover {
     color: #FFF;
-    border: 2px solid #FFF;
+    box-shadow: 1px 1px 2px 1px #BDBDBD;
   }
 }
-
 
 /* Banner for medium and small screens */
 @media only screen and (max-width: 768px) {
@@ -217,6 +216,14 @@ nav.small {
 #top .side-bar-item .text-box {
   width: 100%;
   padding-right: 1.5rem;
+}
+
+#top .side-bar-item a {
+  text-decoration: underline;
+}
+
+#top .side-bar-item h3 a {
+  text-decoration: none;
 }
 
 #top .side-bar-item:nth-child(1) {
